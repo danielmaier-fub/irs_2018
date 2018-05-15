@@ -56,5 +56,5 @@ mapGeoNet <- function(data){
 
 	edges <- do.call(rbind, edges)
 
-	leaflet(vert) %>% addTiles() %>% addMarkers(data = vdf, popup=cat(paste0(vdf$name, ": ", vdf$text))) %>% addPolylines(data = edges)
+	leaflet(vert) %>% addTiles() %>% addMarkers(data = vdf, popup= paste0(vdf$name, ": ", vdf$text)) %>% addPolylines(data = edges)
 }
