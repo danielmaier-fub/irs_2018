@@ -10,7 +10,7 @@ library(devtools)
 library(graphTweets)
 library(rtweet)
 library(igraph)
-library(netwrokD3)
+library(networkD3)
 library(leaflet)
 library(sp)
 
