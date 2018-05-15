@@ -1,3 +1,23 @@
+install.packages("devtools") # Development Tool 
+install.packages("igraph") # Network Analysis Software
+install.packages("rtweet") # Retrieval Tool for Twitter Data
+install.packages("graphTweets") # Contsruct Networks from Data
+install.packages("networkD3") # Network Visualization Software
+install.packages("leaflet") # Software to draw maps
+install.packages("sp") # Software for spacial data
+
+library(devtools)
+library(graphTweets)
+library(rtweet)
+library(igraph)
+library(netwrokD3)
+library(leaflet)
+library(sp)
+
+install_github("mkearney/botrnot") # Bot Identifyer Software
+library(botrnot)
+
+
 # function to divide geocoord-column from 
 # rtweet-dataset into separate columns
 
