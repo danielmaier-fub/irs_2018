@@ -1,10 +1,10 @@
-install.packages("devtools") # Development Tool 
-install.packages("igraph") # Network Analysis Software
-install.packages("rtweet") # Retrieval Tool for Twitter Data
-install.packages("graphTweets") # Contsruct Networks from Data
-install.packages("networkD3") # Network Visualization Software
-install.packages("leaflet") # Software to draw maps
-install.packages("sp") # Software for spacial data
+#install.packages("devtools") # Development Tool 
+#install.packages("igraph") # Network Analysis Software
+#install.packages("rtweet") # Retrieval Tool for Twitter Data
+#install.packages("graphTweets") # Contsruct Networks from Data
+#install.packages("networkD3") # Network Visualization Software
+#install.packages("leaflet") # Software to draw maps
+#install.packages("sp") # Software for spacial data
 
 library(devtools)
 library(graphTweets)
