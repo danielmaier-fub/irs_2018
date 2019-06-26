@@ -24,8 +24,8 @@ library(stm)
 library(quanteda)
 library(xlsx)
 library(LDAvis)
-install_github("mkearney/botrnot") # Bot Identifyer Software
-library(botrnot)
+#install_github("mkearney/botrnot") # Bot Identifyer Software
+#library(botrnot)
 
 
 # function to divide geocoord-column from 
