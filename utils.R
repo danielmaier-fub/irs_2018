@@ -5,6 +5,12 @@ install.packages("graphTweets") # Contsruct Networks from Data
 install.packages("networkD3") # Network Visualization Software
 install.packages("leaflet") # Software to draw maps
 install.packages("sp") # Software for spacial data
+install.packages("rgexf") # Network formatting
+install.packages("stm") # Topic modeling
+install.packages("quanteda") # text as data tool set
+install.packages("xlsx") # import and export excel files
+#install.packages("dfm")
+install.packages("LDAvis") # topic model visulalization
 
 library(devtools)
 library(graphTweets)
@@ -13,7 +19,11 @@ library(igraph)
 library(networkD3)
 library(leaflet)
 library(sp)
-
+library(rgexf)
+library(stm)
+library(quanteda)
+library(xlsx)
+library(LDAvis)
 install_github("mkearney/botrnot") # Bot Identifyer Software
 library(botrnot)
 
@@ -77,4 +87,13 @@ mapGeoNet <- function(data){
 	edges <- do.call(rbind, edges)
 
 	leaflet(vert) %>% addTiles() %>% addMarkers(data = vdf, popup= paste0(vdf$name, ": ", vdf$text)) %>% addPolylines(data = edges)
+}
+
+prune_dfm = function(dfm, minimum_threshold = 0.005, maximum_threshold = 1) {
+    document_frequency <- Matrix::colSums(dfm > 0)
+    threshold_min_abs <- nrow(dfm) * minimum_threshold
+    threshold_max_abs <- nrow(dfm) * maximum_threshold
+    features_to_keep <- names(which(document_frequency > threshold_min_abs & document_frequency < threshold_max_abs))
+    dfm <- dfm[, features_to_keep]
+    return(dfm)
 }
