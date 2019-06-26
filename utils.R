@@ -11,8 +11,12 @@ install.packages("quanteda") # text as data tool set
 install.packages("xlsx") # import and export excel files
 #install.packages("dfm")
 install.packages("LDAvis") # topic model visulalization
+install.packages("tidyverse")
+install.apckages("stringr")
 
 library(devtools)
+library(tidyverse)
+library(stringr)
 library(graphTweets)
 library(rtweet)
 library(igraph)
