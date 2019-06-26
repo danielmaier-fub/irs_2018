@@ -12,7 +12,7 @@ install.packages("xlsx") # import and export excel files
 #install.packages("dfm")
 install.packages("LDAvis") # topic model visulalization
 install.packages("tidyverse")
-install.apckages("stringr")
+install.packages("stringr")
 
 library(devtools)
 library(tidyverse)
