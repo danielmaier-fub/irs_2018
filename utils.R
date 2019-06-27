@@ -93,6 +93,9 @@ mapGeoNet <- function(data){
 	leaflet(vert) %>% addTiles() %>% addMarkers(data = vdf, popup= paste0(vdf$name, ": ", vdf$text)) %>% addPolylines(data = edges)
 }
 
+
+#`prune_dfm` written by grenwi delta @ github (aka Gregor Wiedemann, U Hamburg) 
+
 prune_dfm = function(dfm, minimum_threshold = 0.005, maximum_threshold = 1) {
     document_frequency <- Matrix::colSums(dfm > 0)
     threshold_min_abs <- nrow(dfm) * minimum_threshold
